@@ -53,8 +53,8 @@ SvgDiv.setAttribute("id", "surveybot-svg");
 
 
 // SVG Icons URL	
-SvgUrl = "/buttons/img/button-icons-" + ButtonVariation;
-SvgUrlBtn = "/buttons/img/buttons-" + ButtonVariation;
+SvgUrl = "/buttons-embedded/img/button-icons-" + ButtonVariation;
+SvgUrlBtn = "/buttons-embedded/img/buttons-" + ButtonVariation;
 
 //SVG Buttons URL
 
