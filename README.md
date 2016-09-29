@@ -3,4 +3,4 @@
 <br/>
 <br/>
 <h2> View Demo Page here: </h2>
-<a href="https://github.com/resurvey/buttons-embedded">Demo Page</a>
+<a href="https://resurvey.github.io/buttons-embedded/">Demo Page</a>
