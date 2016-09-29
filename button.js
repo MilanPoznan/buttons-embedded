@@ -229,13 +229,13 @@ var resultW =  DivHeight / DivWidt;
 if (result < 0.35 ) {
 	  
 	 //document.getElementById("Layer_1").className = "button-variation-" + ButtonVariation + "-v";
-	alert(result + "RESOULT < 35");
+	console.log(result + "RESOULT < 35");
 	//document.getElementById("div2").style.height = "auto";
 	var DivHeight = document.getElementById("div2").getBoundingClientRect().height;
 	var Count = DivHeight * 0.6;
 		//alert("Vertikalna  slika!");
 	loadSvgVertical("#surveybot-svg", SvgUrl + "-v.svg");
-	alert("Your template will be changed");
+	console.log("Your template will be changed");
 	//document.getElementById("Layer_1_v").style.height = Count + "px";
 	//document.getElementById("Layer_1_v").style.marginTop = 15 + "%";
 	
@@ -255,7 +255,7 @@ if (result < 0.35 ) {
 	
 	} 
 else if (result > 0.35 && result < 0.7){
-	alert(result + "RESULT 0.35-0.7 ");
+	console.log(result + "RESULT 0.35-0.7 ");
 	var DivWidt = document.getElementById("div2").getBoundingClientRect().width;
 	
 	loadSvg4("#surveybot-svg", SvgUrl + "-4.svg");	
@@ -278,7 +278,7 @@ else if (result > 0.35 && result < 0.7){
 	b.appendChild(child);
 	}	
 else if (result > 0.7 && result < 0.9){
-	alert(result + "RESULT 0.7-0.9");
+	console.log(result + "RESULT 0.7-0.9");
 	//document.getElementById("icon").className = "button-variation-" + ButtonVariation;
 	//document.getElementById("div2").style.height = "304px";
 	loadSvg("#surveybot-svg", SvgUrl);
@@ -308,7 +308,7 @@ else if (result > 0.7 && result < 0.9){
 	//naslov.style.marginTop = x / 12 + "px";
 }
 else if (result > 1.1 && result < 1.6){
-	alert(result + "RESULT 1.1-1.6");
+	console.log(result + "RESULT 1.1-1.6");
 	//document.getElementById("icon").className = "button-variation-" + ButtonVariation;
 	//document.getElementById("div2").style.height = "304px";
 	//loadSvg("#surveybot-svg", SvgUrl);
@@ -340,11 +340,11 @@ else if (result > 1.1 && result < 1.6){
 	//naslov.style.marginTop = x / 12 + "px";
 }
 else if (result > 2){
-	alert(result + "RESULT +2");
+	console.log(result + "RESULT +2");
 		var DivWidt = document.getElementById("div2").getBoundingClientRect().width;
 
 		loadSvgHorizontal("#surveybot-svg", SvgUrl + "-h.svg");	
-		alert("Horizontalna slika! ");
+		console.log("Horizontalna slika! ");
 		var surveySvg = document.getElementById("surveybot-svg");
 		surveySvg.style.width = "50%";
 		surveySvg.style.float = "right";
@@ -360,7 +360,7 @@ else if (result > 2){
 	}
 
 else {
-	alert(result + " ELSE");
+	console.log(result + " ELSE");
 	//document.getElementById("icon").className = "button-variation-" + ButtonVariation;
 	//document.getElementById("div2").style.height = "304px";
 
