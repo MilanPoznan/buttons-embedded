@@ -21,7 +21,7 @@ if (!document.getElementById(cssId))
     link.id   = cssId;
     link.rel  = 'stylesheet';
     link.type = 'text/css';
-    link.href = 'https://gosurveybot.com/crater-stage/buttons/button-style.css'; 
+    link.href = "/buttons-embedded/button-style.css'; 
     link.media = 'all';
     head.appendChild(link); 
 }
