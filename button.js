@@ -259,23 +259,36 @@ else if (result > 0.35 && result < 0.7){
 	var DivWidt = document.getElementById("div2").getBoundingClientRect().width;
 	
 	loadSvg4("#surveybot-svg", SvgUrl + "-4.svg");	
-	//alert("Horizontalna slika! ");
-	// document.getElementById("Layer_4").style.height = Count + "px";
-	
-	//var DivWidt = document.getElementById("div2").getBoundingClientRect().width;
+	loadSvgBtn("#surveybot-link", SvgUrlBtn);
+	// Count Title FOnt
+	var DivWidt = document.getElementById("div2").getBoundingClientRect().width;		
 	var naslov = document.getElementById("naslov");
-	fontSize = (parseInt(DivWidt) / 10 ) + 'px';
+	fontSize = (parseInt(DivWidt) / 12 ) + 'px';
 	naslov.style.fontSize = fontSize;
-	//document.getElementById("Layer_4").style.marginTop = "15px";
-	document.getElementById("surveybot-link").style.width = "100%";
-	//document.getElementById("surveybot-link").style.marginBottom = "30px";
-
 	naslov.style.textAlign = "center";
+	//Coutn SVG Image property
+	var x = document.getElementById('div2').clientHeight;
+	var z = 0.6 * x;
+	var svgPic = document.getElementById("surveybot-svg");
+	svgPic.style.marginTop = "3%";
+	svgPic.style.marginBottom = "2%";
+	var y = document.getElementById("surveybot-svg").style.height = z + "px";
+
+	// Button property
 	var a = document.getElementById("surveybot-button");
 	var child = document.getElementById("surveybot-link");
 	a.removeChild(child);
 	var b = document.getElementById("div2");
 	b.appendChild(child);
+	// If div2  height less than 350px 
+		if (x < 350){
+			var svgPic = document.getElementById("surveybot-svg");
+			svgPic.style.marginTop = "3%";
+			svgPic.style.marginBottom = "0.5%";
+			var svgLink = document.getElementById("surveybot-link");
+			svgLink.style.marginTop = "-15px";
+			surveybot-link 
+		}
 	}	
 else if (result > 0.7 && result < 0.9){
 	console.log(result + "RESULT 0.7-0.9");
