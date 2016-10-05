@@ -89,8 +89,8 @@
     picker2.on("fit", on_fit2);
     picker2.on("create", on_create2);
 
-// ======= Change Arrow color ====
-var picker3 = new CP(document.getElementById('changeArrow'));
+// ======= Change Button color ====
+var picker3 = new CP(document.getElementById('changeButton'));
 
     function on_change3(v, instance) {
         instance.target.value = '#' + v;
