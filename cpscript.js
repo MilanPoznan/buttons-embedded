@@ -134,3 +134,51 @@ var picker3 = new CP(document.getElementById('changeButton'));
     picker3.on("exit", on_exit3);
     picker3.on("fit", on_fit3);
     picker3.on("create", on_create3);
+
+
+// ====== Change Arrow Color ======
+
+var picker4 = new CP(document.getElementById('changeArrow'));
+
+    function on_change4(v, instance) {
+        instance.target.value = '#' + v;
+        document.getElementById("g2").style.fill = '#' + v;
+        console.log('change');
+    }
+
+    function on_start4() {
+        console.log('start');
+    }
+
+    function on_drag4() {
+        console.log('drag');
+    }
+
+    function on_stop4() {
+        console.log('stop');
+    }
+
+    function on_enter4() {
+        console.log('enter');
+    }
+
+    function on_exit4() {
+        console.log('exit');
+    }
+
+    function on_fit4() {
+        console.log('fit');
+    }
+
+    function on_create4(v, instance) {
+        console.log('create');
+    }
+
+    picker4.on("change", on_change4);
+    picker4.on("start", on_start4);
+    picker4.on("drag", on_drag4);
+    picker4.on("stop", on_stop4);
+    picker4.on("enter", on_enter4);
+    picker4.on("exit", on_exit4);
+    picker4.on("fit", on_fit4);
+    picker4.on("create", on_create4);
