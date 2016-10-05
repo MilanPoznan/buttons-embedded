@@ -1,5 +1,5 @@
 
-    var picker = new CP(document.querySelector('input'));
+    var picker = new CP(document.getElementById('changeIcnCol'));
 
     function on_change(v, instance) {
         instance.target.value = '#' + v;
