@@ -529,6 +529,9 @@ else if (result > 3 ){
 	var naslov = document.getElementById("naslov");
 	var child = document.getElementById("surveybot-link");
 	var y = document.getElementById("Layer_1_h");
+	var divNaslov = document.createElement('div');  
+divNaslov.className = "divNaslov" ;
+divNaslov.id = "divNaslov";
 	//Insert h2 into div because on this relation is different composition of elements
 	div2.appendChild(divNaslov);
 	div2.insertBefore(divNaslov, svgPic);	
