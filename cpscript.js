@@ -90,11 +90,11 @@
     picker2.on("create", on_create2);
 
 // ======= Change Arrow color ====
-var picker = new CP(document.getElementById('changeArrow'));
+var picker3 = new CP(document.getElementById('changeArrow'));
 
     function on_change3(v, instance) {
         instance.target.value = '#' + v;
-        document.getElementById("Layer_1_butt").style.fill = '#' + v;
+        document.getElementById("g11").style.fill = '#' + v;
         console.log('change');
     }
 
@@ -126,11 +126,11 @@ var picker = new CP(document.getElementById('changeArrow'));
         console.log('create');
     }
 
-    picker.on("change", on_change3);
-    picker.on("start", on_start3);
-    picker.on("drag", on_drag3);
-    picker.on("stop", on_stop3);
-    picker.on("enter", on_enter3);
-    picker.on("exit", on_exit3);
-    picker.on("fit", on_fit3);
-    picker.on("create", on_create3);
+    picker3.on("change", on_change3);
+    picker3.on("start", on_start3);
+    picker3.on("drag", on_drag3);
+    picker3.on("stop", on_stop3);
+    picker3.on("enter", on_enter3);
+    picker3.on("exit", on_exit3);
+    picker3.on("fit", on_fit3);
+    picker3.on("create", on_create3);
