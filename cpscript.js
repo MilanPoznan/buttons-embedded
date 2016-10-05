@@ -3,7 +3,7 @@
 
     function on_change(v, instance) {
         instance.target.value = '#' + v;
-        document.getElementById("Layer_1_butt").style.fill = '#' + v;
+        document.getElementById("Layer_1_butt").style.fill = '#' + v !important;
         console.log('change');
     }
 
