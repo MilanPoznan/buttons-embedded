@@ -46,7 +46,7 @@
 // ===== Background color picker
  var picker2 = new CP(document.getElementById('changeBgC'));
 
-    function on_change(v, instance) {
+    function on_change2(v, instance) {
         instance.target.value = '#' + v;
         document.getElementById("div2").style.backgroundColor = '#' + v;
         console.log('change');
