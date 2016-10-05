@@ -44,7 +44,7 @@
     picker.on("fit", on_fit);
     picker.on("create", on_create);
 // ===== Background color picker
- var picker2 = new CP(document.querySelector('input'));
+ var picker2 = new CP(document.getElementById('changeBgC'));
 
     function on_change(v, instance) {
         instance.target.value = '#' + v;
