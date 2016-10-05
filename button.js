@@ -228,38 +228,41 @@ var result =  DivWidt / DivHeight;
 var resultW =  DivHeight / DivWidt;
 if (result < 0.35 ) {
 	  
-	 //document.getElementById("Layer_1").className = "button-variation-" + ButtonVariation + "-v";
-	console.log(result + "RESOULT < 35");
-	//document.getElementById("div2").style.height = "auto";
-	var DivHeight = document.getElementById("div2").getBoundingClientRect().height;
-	var Count = DivHeight * 0.6;
-		//alert("Vertikalna  slika!");
-	loadSvgVertical("#surveybot-svg", SvgUrl + "-v.svg");
-	console.log("Your template will be changed");
-	//document.getElementById("Layer_1_v").style.height = Count + "px";
-	//document.getElementById("Layer_1_v").style.marginTop = 15 + "%";
-	
-	
-	var DivWidt = document.getElementById("div2").getBoundingClientRect().width;
+	alert(result + "RESOULT < 0.35");
+	//Making Var
+	var DivWidt = document.getElementById("div2").getBoundingClientRect().width;		
 	var naslov = document.getElementById("naslov");
+	var x = document.getElementById('div2').clientHeight;
+	var z = 0.65 * x;
+	var svgPic = document.getElementById("surveybot-svg");
+	var a = document.getElementById("surveybot-button");
+	var child = document.getElementById("surveybot-link");
+	// Load SVG Pic and Butt
+	loadSvgVertical("#surveybot-svg", SvgUrl + "-v.svg");	
+    loadSvgBtn("#surveybot-link", SvgUrlBtn);
+	// Property	
 	fontSize = (parseInt(DivWidt) / 10 ) + 'px';
 	naslov.style.fontSize = fontSize;
 	naslov.style.textAlign = "center";
-	naslov.style.marginTop = "15%";
-	//document.getElementById("surveybot-link").style.width = ButtonWidth;
-	var x = document.getElementById("surveybot-button");
-	var child = document.getElementById("surveybot-link");
-	x.removeChild(child);
-	var y = document.getElementById("div2");
-	y.appendChild(child);
+	naslov.style.marginTop = "16%";
+	svgPic.style.marginTop = "5%";
+	svgPic.style.marginBottom = "20%";
+	var y = document.getElementById("surveybot-svg").style.height = z + "px";
+	// Button property
 	
+	a.removeChild(child);
+	var b = document.getElementById("div2");
+	b.appendChild(child);
+	child.style.width = "110%";
+	child.style.marginLeft = "-9px";
+	// If div2  height less than 350px 
+		
 	} 
 else if (result > 0.35 && result < 0.7){
-	console.log(result + "RESULT 0.35-0.7 ");
-	var DivWidt = document.getElementById("div2").getBoundingClientRect().width;
-	
+		console.log(result + "RESULT 0.35-0.7 ");
+	// Load SVG Pic and Butt
 	loadSvg4("#surveybot-svg", SvgUrl + "-4.svg");	
-	loadSvgBtn("#surveybot-link", SvgUrlBtn);
+    loadSvgBtn("#surveybot-link", SvgUrlBtn);
 	// Count Title FOnt
 	var DivWidt = document.getElementById("div2").getBoundingClientRect().width;		
 	var naslov = document.getElementById("naslov");
@@ -280,6 +283,7 @@ else if (result > 0.35 && result < 0.7){
 	a.removeChild(child);
 	var b = document.getElementById("div2");
 	b.appendChild(child);
+	child.style.maxWidth = "50%"
 	// If div2  height less than 350px 
 		if (x < 350){
 			var svgPic = document.getElementById("surveybot-svg");
@@ -292,39 +296,124 @@ else if (result > 0.35 && result < 0.7){
 	}	
 else if (result > 0.7 && result < 0.9){
 	console.log(result + "RESULT 0.7-0.9");
-	//document.getElementById("icon").className = "button-variation-" + ButtonVariation;
-	//document.getElementById("div2").style.height = "304px";
+	//Load picture & button
 	loadSvg("#surveybot-svg", SvgUrl);
     loadSvgBtn("#surveybot-link", SvgUrlBtn);
+	// H2 Style
 	var naslov = document.getElementById("naslov");
 	fontSize = (parseInt(DivWidt) / 12 ) + 'px';
 	naslov.style.fontSize = fontSize;
 	naslov.style.textAlign = "center";
-	
+	// Svg pic prop
 	var svgPic = document.getElementById("surveybot-svg");
 	svgPic.style.marginTop = DivHeight / 16 + "px";
 	svgPic.style.marginBottom = "2%";
-	//svgPic.style.marginTop = DivHeight / 9 + "px";
+	
+	// Button prop
 	var a = document.getElementById("surveybot-button");
 	var child = document.getElementById("surveybot-link");
 	a.removeChild(child);
 	var b = document.getElementById("div2");
-	b.appendChild(child);
-	
-	
+	b.appendChild(child);	
+	//  ====== WRONG LAYER!!!!! 
 	var x = document.getElementById('div2').clientHeight;
-	var y = document.getElementById("Layer_4");
-	var z = 65 / 100 * x;
+	var y = document.getElementById("Layer_4"); // not layer 4!!!!
+	var z = 0.6 * x;
 	naslov.style.marginTop = x / 12 + "px";
 	child.style.marginBottom = x / 12 + "px";
 	y.style.maxHeight = z + "px";
 	//naslov.style.marginTop = x / 12 + "px";
 }
-else if (result > 1.1 && result < 1.6){
-	console.log(result + "RESULT 1.1-1.6");
+else if (result >= 0.9 && result <= 1){
+	console.log(result + "RESULT 0.9-1 ");
+	// Load SVG Pic and Butt
+	loadSvg("#surveybot-svg", SvgUrl + ".svg");	
+    loadSvgBtn("#surveybot-link", SvgUrlBtn);
+	// Count Title FOnt
+	var DivWidt = document.getElementById("div2").getBoundingClientRect().width;		
+	var naslov = document.getElementById("naslov");
+	fontSize = (parseInt(DivWidt) / 14 ) + 'px';
+	naslov.style.fontSize = fontSize;
+	naslov.style.textAlign = "center";
+	//Coutn SVG Image property
+	var x = document.getElementById('div2').clientHeight;
+	var z = 0.5 * x;
+	var svgPic = document.getElementById("surveybot-svg");
+	svgPic.style.marginTop = "5%";
+	svgPic.style.marginBottom = "2%";
+	var y = document.getElementById("surveybot-svg").style.height = z + "px";
+
+	// Button property
+	var a = document.getElementById("surveybot-button");
+	var child = document.getElementById("surveybot-link");
+	a.removeChild(child);
+	var b = document.getElementById("div2");
+	child.style.marginTop = "-" + x / 14 + "px";
+	b.appendChild(child);
+	// If div2  height less than 350px 
+	}	
+else if (result > 1 && result <= 1.2){
+	console.log(result + "RESULT 1-1.2 ");
+	// Load SVG Pic and Butt
+	loadSvg("#surveybot-svg", SvgUrl + ".svg");	
+    loadSvgBtn("#surveybot-link", SvgUrlBtn);
+	// Count Title FOnt
+	var DivWidt = document.getElementById("div2").getBoundingClientRect().width;		
+	var naslov = document.getElementById("naslov");
+	fontSize = (parseInt(DivWidt) / 14 ) + 'px';
+	naslov.style.fontSize = fontSize;
+	naslov.style.textAlign = "center";
+	//Coutn SVG Image property
+	var x = document.getElementById('div2').clientHeight;
+	var z = 0.45 * x;
+	var svgPic = document.getElementById("surveybot-svg");
+	svgPic.style.marginTop = "3%";
+	svgPic.style.marginBottom = "2%";
+	var y = document.getElementById("surveybot-svg").style.height = z + "px";
+
+	// Button property
+	var a = document.getElementById("surveybot-button");
+	var child = document.getElementById("surveybot-link");
+	a.removeChild(child);
+	var b = document.getElementById("div2");
+	child.style.marginTop = "-" + x / 14 + "px";
+	b.appendChild(child);
+	// If div2  height less than 350px 
+	}	
+else if (result > 1.2 && result < 1.6){
+	console.log(result + "RESULT 1.21-1.6");
 	//document.getElementById("icon").className = "button-variation-" + ButtonVariation;
 	//document.getElementById("div2").style.height = "304px";
 	//loadSvg("#surveybot-svg", SvgUrl);
+	loadSvg("#surveybot-svg", SvgUrl + ".svg");	
+    loadSvgBtn("#surveybot-link", SvgUrlBtn);
+	// Count Title FOnt
+	var DivWidt = document.getElementById("div2").getBoundingClientRect().width;		
+	var naslov = document.getElementById("naslov");
+	fontSize = (parseInt(DivWidt) / 20 ) + 'px';
+	naslov.style.fontSize = fontSize;
+	naslov.style.textAlign = "center";
+	//Coutn SVG Image property
+	var x = document.getElementById('div2').clientHeight;
+	var z = 0.4 * x;
+	var svgPic = document.getElementById("surveybot-svg");
+	svgPic.style.marginTop = "3%";
+	svgPic.style.marginBottom = "2%";
+	var y = document.getElementById("surveybot-svg").style.height = z + "px";
+
+	// Button property
+	var a = document.getElementById("surveybot-button");
+	var child = document.getElementById("surveybot-link");
+	a.removeChild(child);
+	var b = document.getElementById("div2");
+	child.style.marginTop = "-" + x / 14 + "px";
+	b.appendChild(child);
+	child.style.width = "60%";
+	child.style.display ="inline-block";
+	//naslov.style.marginTop = x / 12 + "px";
+}
+else if (result > 1.61 && result < 2){
+	console.log(result + "RESULT 1.61-2");
 	loadSvgHorizontal("#surveybot-svg", SvgUrl + "-h.svg");	
     loadSvgBtn("#surveybot-link", SvgUrlBtn);
 	var naslov = document.getElementById("naslov");
@@ -333,45 +422,157 @@ else if (result > 1.1 && result < 1.6){
 	naslov.style.textAlign = "center";
 	
 	var svgPic = document.getElementById("surveybot-svg");
-	svgPic.style.marginTop = DivHeight / 16 + "px";
-	svgPic.style.marginBottom = "2%";
+	
+	//svgPic.style.marginTop = DivHeight / 16 + "px";
+	//svgPic.style.marginBottom = "2%";
 	//svgPic.style.marginTop = DivHeight / 9 + "px";
 	var a = document.getElementById("surveybot-button");
 	var child = document.getElementById("surveybot-link");
 	a.removeChild(child);
 	var b = document.getElementById("div2");
 	b.appendChild(child);
-	child.style.maxWidth = "75%";
-	
 	
 	var x = document.getElementById('div2').clientHeight;
-	var y = document.getElementById("Layer_4");
-	var z = 65 / 100 * x;
-	naslov.style.marginTop = x / 12 + "px";
-	child.style.marginBottom = x / 12 + "px";
-	y.style.maxHeight = z + "px";
-	//naslov.style.marginTop = x / 12 + "px";
-}
-else if (result > 2){
-	console.log(result + "RESULT +2");
-		var DivWidt = document.getElementById("div2").getBoundingClientRect().width;
-
-		loadSvgHorizontal("#surveybot-svg", SvgUrl + "-h.svg");	
-		console.log("Horizontalna slika! ");
-		var surveySvg = document.getElementById("surveybot-svg");
-		surveySvg.style.width = "50%";
-		surveySvg.style.float = "right";
-		 document.getElementById("Layer_1_h").style.height = Count + "px";
-		document.getElementById("Layer_1_h").style.marginTop = "15px";
-		var DivWidt = document.getElementById("div2").getBoundingClientRect().width;
+	if ( x > 350){
+		alert("vece IF");
 		var naslov = document.getElementById("naslov");
-		fontSize = (parseInt(DivWidt) / 20 ) + 'px';
-		naslov.style.fontSize = fontSize;
-		document.getElementById("surveybot-link").style.width = "50%";
-		document.getElementById("surveybot-link").style.marginBottom = "30px";
-	
+		var child = document.getElementById("surveybot-link");
+		var y = document.getElementById("Layer_1_h");
+		var z = 0.65 * x;
+		var svgPic = document.getElementById("surveybot-svg");
+		svgPic.style.marginTop = "4%";
+		svgPic.style.marginBottom = "2%";
+		naslov.style.marginTop = x / 12 + "px";
+		child.style.marginBottom = x / 12 + "px";
+		naslov.style.fontSize = x / 10 + "px";
+		y.style.maxHeight = z + "px";
+		child.style.maxWidth = "50%";
 	}
+	
+	else {
+		alert("ELSE");
+		var naslov = document.getElementById("naslov");
+		var child = document.getElementById("surveybot-link");
+		naslov.style.fontSize = x / 10 + "px";
+		naslov.style.marginTop = x / 12 + "px";
+		naslov.style.marginBottom = "15px";
+		child.style.width = "60%";
+		child.style.marginBottom = x / 10 + "px";
+		child.style.marginTop = "-2%";
+		y.style.maxHeight = z + "px";
+		
+	}
+	
+	
+	
+	
+}
 
+else if (result >= 2 && result < 3 ){
+	console.log(result + "RESULT 2 - 3 ");
+	loadSvgHorizontal("#surveybot-svg", SvgUrl + "-h.svg");	
+    loadSvgBtn("#surveybot-link", SvgUrlBtn);
+	var naslov = document.getElementById("naslov");
+	fontSize = (parseInt(DivWidt) / 18 ) + 'px';
+	naslov.style.fontSize = fontSize;
+	naslov.style.textAlign = "center";
+	
+	var svgPic = document.getElementById("surveybot-svg");
+	
+	//svgPic.style.marginTop = DivHeight / 16 + "px";
+	//svgPic.style.marginBottom = "2%";
+	//svgPic.style.marginTop = DivHeight / 9 + "px";
+	var a = document.getElementById("surveybot-button");
+	var child = document.getElementById("surveybot-link");
+	a.removeChild(child);
+	var b = document.getElementById("div2");
+	b.appendChild(child);
+	
+	var x = document.getElementById('div2').clientHeight;
+	if ( x > 350){
+		console.log("vece IF");
+		var naslov = document.getElementById("naslov");
+		var child = document.getElementById("surveybot-link");
+		var y = document.getElementById("Layer_1_h");
+		var z = 0.65 * x;
+		var svgPic = document.getElementById("surveybot-svg");
+		svgPic.style.marginTop = "4%";
+		svgPic.style.marginBottom = "2%";
+		naslov.style.marginTop = x / 12 + "px";
+		child.style.marginBottom = x / 12 + "px";
+		naslov.style.fontSize = x / 10 + "px";
+		y.style.maxHeight = z + "px";
+		child.style.maxWidth = "50%";
+	}
+	else {
+		alert("ELSE");
+		var naslov = document.getElementById("naslov");
+		var child = document.getElementById("surveybot-link");
+		naslov.style.fontSize = x / 10 + "px";
+		naslov.style.marginTop = x / 12 + "px";
+		naslov.style.marginBottom = "5px";
+		child.style.width = "50%";
+		child.style.marginBottom = x / 10 + "px";
+		child.style.marginTop = "-2%";
+		y.style.maxHeight = z + "px";
+		
+	}
+	
+	
+	
+	
+}
+else if (result > 3 ){
+	console.log(result + "RESULT 3+");
+	//creating needed variables 
+	var svgPic = document.getElementById("surveybot-svg");
+	var naslov = document.getElementById("naslov");
+	var child = document.getElementById("surveybot-link");
+	var y = document.getElementById("Layer_1_h");
+	//Insert h2 into div because on this relation is different composition of elements
+	div2.appendChild(divNaslov);
+	div2.insertBefore(divNaslov, svgPic);	
+	divNaslov.appendChild(naslov);
+	
+	//document.getElementbyId('divNaslov').appendChild(naslov);
+	loadSvgHorizontal("#surveybot-svg", SvgUrl + "-h.svg");	
+    loadSvgBtn("#surveybot-link", SvgUrlBtn);
+	
+	//Properties 
+	div2.style.display = "inline-flex";
+	div2.style.alignItems = "center";
+	divNaslov.style.width = "20%";
+	divNaslov.style.float = "left";
+	divNaslov.style.textAlign = "center";
+	divNaslov.style.marginLeft =  "2%";
+	fontSize = (parseInt(DivWidt) / 48 ) + 'px';
+	naslov.style.fontSize = fontSize;
+	naslov.style.textAlign = "center";
+	//naslov.style.marginTop = "7%";
+	naslov.style.fontFamily = "Arial";
+	svgPic.style.width = "55%";	
+	/*svgPic.style.marginLeft = "2%";*/	
+	child.style.width = "18%";	
+	
+	//child.style.marginTop = "25px"; 	
+	
+	//svgPic.style.marginTop = "4%";
+		//svgPic.style.marginBottom = "2%";
+	//svgPic.style.marginTop = DivHeight / 16 + "px";
+	//svgPic.style.marginBottom = "2%";
+	//svgPic.style.marginTop = DivHeight / 9 + "px";
+	var a = document.getElementById("surveybot-button");
+	
+	a.removeChild(child);
+	var b = document.getElementById("div2");
+	b.appendChild(child);		
+		var child = document.getElementById("surveybot-link");
+		var y = document.getElementById("Layer_1_h");
+		var z = 0.65 * x;		
+		child.style.marginBottom = x / 12 + "px";		
+		//y.style.maxHeight = z + "px";
+		child.style.maxWidth = "50%";	
+}
 else {
 	console.log(result + " ELSE");
 	//document.getElementById("icon").className = "button-variation-" + ButtonVariation;
