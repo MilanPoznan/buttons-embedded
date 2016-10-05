@@ -3,7 +3,7 @@
 
     function on_change(v, instance) {
         instance.target.value = '#' + v;
-        document.getElementById("surveybot-link").style.backgroundColor = '#' + v;
+        document.getElementById("Layer_1_butt").style.backgroundColor = '#' + v;
         console.log('change');
     }
 
