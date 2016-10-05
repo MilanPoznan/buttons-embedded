@@ -94,7 +94,7 @@ var picker = new CP(document.getElementById('changeArrow'));
 
     function on_change3(v, instance) {
         instance.target.value = '#' + v;
-        document.getElementById("g1").style.fill = '#' + v;
+        document.getElementById("Layer_1_butt").style.fill = '#' + v;
         console.log('change');
     }
 
