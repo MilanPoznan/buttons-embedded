@@ -52,39 +52,39 @@
         console.log('change');
     }
 
-    function on_start() {
+    function on_start2() {
         console.log('start');
     }
 
-    function on_drag() {
+    function on_drag2() {
         console.log('drag');
     }
 
-    function on_stop() {
+    function on_stop2() {
         console.log('stop');
     }
 
-    function on_enter() {
+    function on_enter2() {
         console.log('enter');
     }
 
-    function on_exit() {
+    function on_exit2() {
         console.log('exit');
     }
 
-    function on_fit() {
+    function on_fit2() {
         console.log('fit');
     }
 
-    function on_create(v, instance) {
+    function on_create2(v, instance) {
         console.log('create');
     }
 
-    picker2.on("change", on_change);
-    picker2.on("start", on_start);
-    picker2.on("drag", on_drag);
-    picker2.on("stop", on_stop);
-    picker2.on("enter", on_enter);
-    picker2.on("exit", on_exit);
-    picker2.on("fit", on_fit);
-    picker2.on("create", on_create);
+    picker2.on("change", on_change2);
+    picker2.on("start", on_start2);
+    picker2.on("drag", on_drag2);
+    picker2.on("stop", on_stop2);
+    picker2.on("enter", on_enter2);
+    picker2.on("exit", on_exit2);
+    picker2.on("fit", on_fit2);
+    picker2.on("create", on_create2);
