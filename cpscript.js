@@ -49,7 +49,7 @@ var picker2 = new CP(document.getElementById('changeBgC'));
 
     function on_change2(v, instance) {
         instance.target.value = '#' + v;
-        document.getElementById("div2").style.backgroundColor = '#3c3c3b';
+        document.getElementById("div2").style.backgroundColor = '#' + v;
         console.log('change');
     }
 
