@@ -55,6 +55,7 @@ var picker2 = new CP(document.getElementById('changeBgC'));
 
     function on_start2() {
         console.log('start');
+        document.getElementById("div2").style.backgroundColor = '#fff';
     }
 
     function on_drag2() {
