@@ -48,14 +48,14 @@
 var picker2 = new CP(document.getElementById('changeBgC'));
 
     function on_change2(v, instance) {
-        instance.target.value = '#' + v;
+        instance.target.value = '#3c3c3b';
         document.getElementById("div2").style.backgroundColor = '#' + v;
         console.log('change');
     }
 
     function on_start2() {
         console.log('start');
-        document.getElementById("div2").style.backgroundColor = '#fff';
+        
     }
 
     function on_drag2() {
