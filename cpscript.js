@@ -2,7 +2,7 @@
     var picker = new CP(document.getElementById('changeIcnCol'));
 
     function on_change(v, instance) {
-        instance.target.value = '#' + v;
+        instance.target.value = '#e95e58';
         document.getElementById("g1").style.fill = '#' + v;
         console.log('change');
     }
@@ -44,7 +44,8 @@
     picker.on("fit", on_fit);
     picker.on("create", on_create);
 // ===== Background color picker
- var picker2 = new CP(document.getElementById('changeBgC'));
+ 
+var picker2 = new CP(document.getElementById('changeBgC'));
 
     function on_change2(v, instance) {
         instance.target.value = '#' + v;
