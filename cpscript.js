@@ -49,7 +49,7 @@ var picker2 = new CP(document.getElementById('changeBgC'));
 
     function on_change2(v, instance) {
         instance.target.value = '#' + v;
-        document.getElementById("div2").style.backgroundColor = '#' + v;
+        document.getElementById("div2").style.backgroundColor = '#3c3c3b';
         console.log('change');
     }
 
@@ -123,7 +123,7 @@ var picker3 = new CP(document.getElementById('changeButton'));
         console.log('fit');
     }
 
-    function on_create3(v, instance) {
+    function on_create3(v, instance
         console.log('create');
     }
 
