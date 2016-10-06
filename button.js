@@ -33,7 +33,7 @@ div2.id = "div2";
 div2.style.color= ButtonColor;
 div2.style.height = ButtonHeight;
 div2.style.width = ButtonWidth;
-div2.style.backgroundColor = BackgroundColor + "!improtant"; 
+div2.style.backgroundColor = BackgroundColor + " !improtant"; 
 
 // Button title
 var h2 = document.createElement('h2');
