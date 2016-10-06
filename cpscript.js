@@ -2,7 +2,7 @@
     var picker = new CP(document.getElementById('changeIcnCol'));
 
     function on_change(v, instance) {
-        instance.target.value = '#e95e58';
+        instance.target.value = '#' + v;
         document.getElementById("g1").style.fill = '#' + v;
         console.log('change');
     }
