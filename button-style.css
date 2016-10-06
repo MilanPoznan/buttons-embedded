@@ -114,3 +114,11 @@ width: 80%;
 #Layer_1_butt{
 	width : 60%;
 }
+button {
+    background-color: #e95e58;
+    border: 2px solid #3c3c3b;
+    border-radius: 5px;
+    width: 300px;
+    height: 40px;
+    font-size: 19px;
+}
