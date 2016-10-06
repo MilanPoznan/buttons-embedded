@@ -610,11 +610,11 @@ else {
 
 	
 
-var x = document.getElementById("surveybot-button");
+/*var x = document.getElementById("surveybot-button");
 var child = document.getElementById("surveybot-link");
 x.removeChild(child);
 var y = document.getElementById("div2");
-y.appendChild(child);
+y.appendChild(child);*/
 
 
 
