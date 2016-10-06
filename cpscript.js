@@ -123,7 +123,7 @@ var picker3 = new CP(document.getElementById('changeButton'));
         console.log('fit');
     }
 
-    function on_create3(v, instance
+    function on_create3(v, instance)
         console.log('create');
     }
 
