@@ -11,6 +11,12 @@
   $( function() {
     $( "#div2" ).resizable();
   } );
+	  function submitHeight() {
+	alert("test");
+	
+	var userHeight = document.getElementById('userHeight');
+	document.getElementById("div2").style.height = userHeight.value + "px";
+}
   </script>
 	<link href="/buttons-embedded/color-picker/color-picker.min.css" rel="stylesheet">
 	<script src="/buttons-embedded/color-picker/color-picker.min.js"></script>
@@ -125,12 +131,7 @@ function submitWidth() {
 	
 }
 
-function submitHeight() {
-	alert("test");
-	
-	var userHeight = document.getElementById('userHeight');
-	document.getElementById("div2").style.height = userHeight.value + "px";
-}
+
 
 
 
