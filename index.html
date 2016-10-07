@@ -18,6 +18,9 @@
 </head>
 <body>
 <div style="max-width:400px;margin:auto;">
+Type your width: <input type="text" id="userWidth" name="userWidth"  onchange="submitWidth()" /><br>
+
+Type your height: <input type="text" id="userHeight" name="userHeight" onchange="submitHeight()" /><br>
 
 <p>Select Button color: <input type="text" id="changeButton" spellcheck="false"></p>
     <script src="/buttons-embedded/cpscript.js"></script>
@@ -115,6 +118,15 @@ window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
+function submitWidth() {
+	var userWidth = document.getElementById('userWidth');
+	document.getElementById("div2").style.width = userWidth.value + "px";
+	
+}
+function submitHeight() {
+	var userHeight = document.getElementById('userHeight');
+	document.getElementById("div2").style.height = userHeight.value + "px";
+}
 }
 
 
