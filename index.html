@@ -21,12 +21,7 @@
 <p>Select Background-color: <input type="text" id="changeBgC" spellcheck="false"></p>
     <script src="/buttons-embedded/cpscript.js"></script>
 &nbsp;
-	<script>
-		function print() {	
-	var butCol = document.getElementById("changeButton").value;
- document.getElementById("body1").innerHTML = butCol;
-	}
-	</script>
+
 
 <div id="surveybot-button">
 <a id="surveybot-link" class="button" href="https://gosurveybot.com/liberty-moving-video-chat-estimate/">SCHEDULE VIRTUAL ESTIMATE USIGN SURVEYBOT</a><br>
@@ -69,7 +64,10 @@ SvgButton-color="#22ff22">
 </div>
 
 <script>
-
+function print() {	
+	var butCol = document.getElementById("changeButton").value;
+ document.getElementById("body1").innerHTML = butCol;
+	}
 // Get the modal
 var modal = document.getElementById('myModal');
 
