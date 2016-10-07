@@ -50,7 +50,7 @@ SvgButton-color="#22ff22">
       <span class="close">×</span>
       <h2>How to implement My Surveybot embedded code? </h2>
     </div>
-    <div class="modal-body">
+    <div class="modal-body" id="body1">
       <p>Step 1) Copy your code below: </p>
       <p></p>
     </div>
@@ -88,6 +88,7 @@ window.onclick = function(event) {
     }
 }
 var butCol = document.getElementById("changeButton").value;
+ document.getElementById("body1").innerHTML = butCol;
 </script>
 
 &nbsp;
