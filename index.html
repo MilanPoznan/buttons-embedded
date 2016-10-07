@@ -67,7 +67,11 @@ SvgButton-color="#22ff22">
 function print() {	
 	alert("hello");
 	var butCol = document.getElementById("changeButton").value;
- document.getElementById("body1").innerHTML = "SvgButton=" + butCol;
+ 	document.getElementById("body1").innerHTML = "SvgButton=" + butCol;
+	var arrowCol = document.getElementById("changeArrow").value;
+	document.getElementById("body1").innerHTML = "Arrow-color=" + arrowCol;
+	var bcgClr = document.getElementById("changeBgC").value;
+	document.getElementById("body1").innerHTML = "background-color=" + bcgClr;
 	}
 // Get the modal
 var modal = document.getElementById('myModal');
