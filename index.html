@@ -40,10 +40,7 @@ SvgButton-color="#22ff22">
 &nbsp;
  <!-- Trigger/Open The Modal -->
 <button id="myBtn" onclick="print()">I want my embedded code! </button>
-	<script>
-	var butCol = document.getElementById("changeButton").value;
- document.getElementById("body1").innerHTML = butCol;
-	</script>
+	
 <!-- The Modal -->
 <div id="myModal" class="modal">
 
@@ -65,6 +62,10 @@ SvgButton-color="#22ff22">
 </div>
 
 <script>
+	function print() {	
+	var butCol = document.getElementById("changeButton").value;
+ document.getElementById("body1").innerHTML = butCol;
+	}
 // Get the modal
 var modal = document.getElementById('myModal');
 
