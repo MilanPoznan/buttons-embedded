@@ -23,19 +23,7 @@ alert("test H");
 var userWidth = document.getElementById('userWidth');
 document.getElementById("div2").style.width = userWidth.value + "px";
     
-}
-      function print() {  
-    console.log("testing");
-    
-    var butCol = document.getElementById("changeButton").value;
-    document.getElementById("body1").innerHTML = "SvgButton=" + butCol;
-    var arrowCol = document.getElementById("changeArrow").value;
-    document.getElementById("body2").innerHTML = "Arrow-color=" + arrowCol;
-   
-    var icnClr = document.getElementById("changeIcnCol").value;
-    document.getElementById("body4").innerHTML = "Icon-color=" + icnClr;
-    
-    }
+
   </script>
     <link href="/buttons-embedded/color-picker/color-picker.min.css" rel="stylesheet">
     <script src="/buttons-embedded/color-picker/color-picker.min.js"></script>
@@ -105,7 +93,20 @@ SvgButton-color="#22ff22">
 </div>
 
 <script>
-
+}
+      function print() {  
+    console.log("testing");
+    
+    var butCol = document.getElementById("changeButton").value;
+    document.getElementById("body1").innerHTML = "SvgButton=" + butCol;
+    var arrowCol = document.getElementById("changeArrow").value;
+    document.getElementById("body2").innerHTML = "Arrow-color=" + arrowCol;
+    var bcgClr = document.getElementById("changeBgC").value;
+    document.getElementById("body3").innerHTML = "background-color=" + bcgClr;
+    var icnClr = document.getElementById("changeIcnCol").value;
+    document.getElementById("body4").innerHTML = "Icon-color=" + icnClr;
+    
+    }
 // Get the modal
 var modal = document.getElementById('myModal');
 // Get the button that opens the modal
