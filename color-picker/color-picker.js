@@ -147,7 +147,7 @@ var CP = function(target, events) {
         } else if (rgb) {
             return RGB2HSV([+rgb[1], +rgb[2], +rgb[3]]);
         }
-        return [0, 1, 1]; // default is red
+        return [0, 2, 1]; // default is red
     };
 
     // add event
