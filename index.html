@@ -1,137 +1,120 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Surveybot demo widget</title>
-      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
- 
-  
+  <title>Surveybot demo widget</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
-  $( function() {
-    $( "#div2" ).resizable();
-  } );
-function submitHeight() {
-alert("test W");
-    
-var userHeight = document.getElementById('userHeight');
-document.getElementById("div2").style.height = userHeight.value + "px";
-}
-      //++++======= Change height
-function submitWidth() {
-alert("test H");
-var userWidth = document.getElementById('userWidth');
-document.getElementById("div2").style.width = userWidth.value + "px";
-    
+    $(function () {
+      $("#div2").resizable();
+    });
+    function reloadButton() {
+      var width = document.getElementById('userWidth');
+      var height = document.getElementById('userHeight');
+      document.getElementById('div2').style.height = (!height ? 500 : height) + "px";
+      document.getElementById('div2').style.width = (!width ? 500 : width) + "px";
 
+      var options = {
+        "width": width,
+        "height": height,
+        'elementId': 'div2'
+      };
+      loadButton(options);
+    }
   </script>
-    <link href="/buttons-embedded/color-picker/color-picker.min.css" rel="stylesheet">
-    <script src="/buttons-embedded/color-picker/color-picker.min.js"></script>
-    <link href="/buttons-embedded/popup.css" rel="stylesheet">
+  <link href="/color-picker/color-picker.min.css" rel="stylesheet">
+  <script src="/color-picker/color-picker.min.js"></script>
+  <link href="/popup.css" rel="stylesheet">
 </head>
-<body>
-<div style="max-width:400px;margin:auto;">
-Type your width: <input type="text" id="userWidth" name="userWidth"  onchange="submitWidth()" /><br>
-
-Type your height: <input type="text" id="userHeight" name="userHeight" onchange="submitHeight()" /><br>
-
-<p>Select Button color: <input type="text" id="changeButton" spellcheck="false"></p>
-    <script src="/buttons-embedded/cpscript.js"></script>
-<p>Select Arrow color: <input type="text" id="changeArrow" spellcheck="false"></p>
-    <script src="/buttons-embedded/cpscript.js"></script>
-
-<p>Select Icon color: <input type="text" id="changeIcnCol" spellcheck="false"></p>
-    <script src="/buttons-embedded/cpscript.js"></script>
-
-<p>Select Background-color: <input type="text" id="changeBgC" spellcheck="false"></p>
-    <script src="/buttons-embedded/cpscript.js"></script>
-
-
-
-<div id="surveybot-button">
-<a id="surveybot-link" class="button" href="https://gosurveybot.com/liberty-moving-video-chat-estimate/">SCHEDULE VIRTUAL ESTIMATE USIGN SURVEYBOT</a><br>
-<script id="buttons-script" src="/buttons-embedded/button.js"  button-variant="2" 
-Icon-color="#3c3c3b"
-button-color="#fff"
-button-width="250px" 
-button-height="500px" 
-background-color="#E1FFCF"
-Arrow-color="#807794"
-header-color = "#807794"
-SvgButton-color="#22ff22">  
-</script>
-
-</div>
-
-&nbsp;
- <!-- Trigger/Open The Modal -->
-<button id="myBtn">I want my embedded code! </button>
-    
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <div class="modal-header">
-      <span class="close">×</span>
-      <h2>How to implement My Surveybot embedded code? </h2>
+<body onload="loadButton(null, null);">
+  <div style="max-width:400px;margin:auto;">
+    Type your width: <input type="text" id="userWidth" name="userWidth" onchange="reloadButton()" /><br>
+    Type your height: <input type="text" id="userHeight" name="userHeight" onchange="reloadButton()" /><br>
+    <p>Select Button color: <input type="text" id="changeButton" spellcheck="false"></p>
+    <script src="/cpscript.js"></script>
+    <p>Select Arrow color: <input type="text" id="changeArrow" spellcheck="false"></p>
+    <script src="/cpscript.js"></script>
+    <p>Select Icon color: <input type="text" id="changeIcnCol" spellcheck="false"></p>
+    <script src="/cpscript.js"></script>
+    <p>Select Background-color: <input type="text" id="changeBgC" spellcheck="false"></p>
+    <script src="/cpscript.js"></script>
+    <div id="surveybot-button">
+      <a id="surveybot-link" class="button" href="https://gosurveybot.com/liberty-moving-video-chat-estimate/">SCHEDULE VIRTUAL ESTIMATE USIGN SURVEYBOT</a><br>
+      <script id="buttons-script" src="/button.js" button-variant="2"
+              icon-color="#3c3c3b"
+              button-color="#fff"
+              button-width="1000px"
+              button-height="200px"
+              background-color="#E1FFCF"
+              arrow-color="#807794"
+              header-color="#807794"
+              svgbutton-color="#22ff22">
+      </script>
     </div>
-    <div class="modal-body">
-      <p>Step 1) Copy your code below: </p>
-        
-       <p id="body1"></p>
-    <p id="body2"></p>
-    <p id="body3"></p>
-    <p id="body4"></p>
+    &nbsp;
+    <!-- Trigger/Open The Modal -->
+    <button id="myBtn">I want my embedded code! </button>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">×</span>
+          <h2>How to implement My Surveybot embedded code? </h2>
+        </div>
+        <div class="modal-body">
+          <p>Step 1) Copy your code below: </p>
+
+          <p id="body1"></p>
+          <p id="body2"></p>
+          <p id="body3"></p>
+          <p id="body4"></p>
+        </div>
+
+        <div class="modal-footer">
+          <h3>Modal Footer</h3>
+        </div>
+      </div>
     </div>
-     
-    <div class="modal-footer">
-      <h3>Modal Footer</h3>
-    </div>
-  </div>
+    <script>
 
-</div>
-
-<script>
-
-      function print() {  
-    console.log("testing");
-    
-    var butCol = document.getElementById("changeButton").value;
-    document.getElementById("body1").innerHTML = "SvgButton=" + butCol;
-    var arrowCol = document.getElementById("changeArrow").value;
-    document.getElementById("body2").innerHTML = "Arrow-color=" + arrowCol;
-    var bcgClr = document.getElementById("changeBgC").value;
-    document.getElementById("body3").innerHTML = "background-color=" + bcgClr;
-    var icnClr = document.getElementById("changeIcnCol").value;
-    document.getElementById("body4").innerHTML = "Icon-color=" + icnClr;
-    
-    }
-// Get the modal
-var modal = document.getElementById('myModal');
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-    modal.style.display = "block";
-    print();
-}
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
+      function print() {
+        console.log("testing");
+        var butCol = document.getElementById("changeButton").value;
+        document.getElementById("body1").innerHTML = "SvgButton=" + butCol;
+        var arrowCol = document.getElementById("changeArrow").value;
+        document.getElementById("body2").innerHTML = "Arrow-color=" + arrowCol;
+        var bcgClr = document.getElementById("changeBgC").value;
+        document.getElementById("body3").innerHTML = "background-color=" + bcgClr;
+        var icnClr = document.getElementById("changeIcnCol").value;
+        document.getElementById("body4").innerHTML = "Icon-color=" + icnClr;
+      }
+      // Get the modal
+      var modal = document.getElementById('myModal');
+      // Get the button that opens the modal
+      var btn = document.getElementById("myBtn");
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+      // When the user clicks the button, open the modal
+      btn.onclick = function () {
+        modal.style.display = "block";
+        print();
+      }
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
         modal.style.display = "none";
-    }
-}
-</script>
-&nbsp;
-&nbsp;
-</div>
+      }
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    </script>
+    &nbsp;
+    &nbsp;
+  </div>
 </body>
 </html>
-
