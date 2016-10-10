@@ -9,6 +9,7 @@ var BackgroundColor = currentScript.getAttribute("background-color");
 var ButtonLink = currentScript.getAttribute("button-link");
 var ButtonVariation = currentScript.getAttribute("button-variant");
 var FontSize = currentScript.getAttribute("font-size");
+var HeaderColor = currentScript.getAttribute("header-color");
 //var IconsColor = currentScript.getAttribute("Icons-color");
 
 
@@ -33,7 +34,7 @@ div2.id = "div2";
 div2.style.color= ButtonColor;
 div2.style.height = ButtonHeight;
 div2.style.width = ButtonWidth;
-div2.style.backgroundColor = "#fff !important"; 
+div2.style.backgroundColor = BackgroundColor; 
 
 // Button title
 var h2 = document.createElement('h2');
@@ -42,7 +43,7 @@ h2.setAttribute("id", "naslov");
 h2.className = "naslov";
 //h2.style.textAlign = "center";
 h2.style.fontSize = FontSize;
-
+h2.style.color = HeaderColor;
 // Line break
 var linebreak = document.createElement('br');   
 		
