@@ -11,6 +11,7 @@ a {
 }
 #div2 {
 	padding:5px;
+	background-color: blue !important; 
 }
 
 #div2 img {
